@@ -54,6 +54,10 @@ where
       port is the port on the host machine to communicate with the server
       encryption scheme for communications is off/aes128/aes256
       key to use for encryption (not used if no encryption is to happen)
+      
+Note that in write mode, you must pipe the file you wish to write to the server into the command. The `<filename>` specified is what the server will write the file as. Example:
+
+     cat myfile.txt | python3 __main__.py write renamed_file.txt host:port aes128 mykey
 
 # Test Output:
 

@@ -29,7 +29,7 @@ read -rsn1
 
 echo "Uploading 1MB.bin md5:"
 openssl md5 1MB.bin
-cat 1MB.bin | python3 __main__.py write 256MB.bin $1:$2 none
+cat 1MB.bin | python3 __main__.py write 1MB.bin $1:$2 none
 echo ""
 
 echo "Press any key to download 1MB no encryption & compare md5"
@@ -37,7 +37,7 @@ read -rsn1
 
 echo "Downloading 1MB.bin md5:"
 openssl md5 1MB.bin
-python3 __main__.py read 256MB.bin $1:$2 none > 1MB_copy.bin
+python3 __main__.py read 1MB.bin $1:$2 none > 1MB_copy.bin
 
 echo ""
 echo "Md5 comparison: "
